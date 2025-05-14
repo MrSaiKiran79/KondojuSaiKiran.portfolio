@@ -83,9 +83,13 @@ const Hero: React.FC = () => {
               {/* Main profile image container */}
               <div className="relative z-10 w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 p-1.5">
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-portfolio-blue/30 to-portfolio-teal/30 p-1 backdrop-blur-xl overflow-hidden">
-                  {/* Profile image placeholder - replace with actual image when available */}
-                  <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center overflow-hidden">
-                    <span className="text-gray-400 text-xl">Kondoju Sai Kiran</span>
+                  {/* Profile image */}
+                  <div className="w-full h-full rounded-full overflow-hidden">
+                    <img 
+                      src="https://i.postimg.cc/Hsx1RfcJ/Sai-Kiran-modified.jpg" 
+                      alt="Kondoju Sai Kiran" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
