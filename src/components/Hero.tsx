@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
           >
             <div className="inline-block">
               <span className="px-3 py-1 text-sm bg-portfolio-blue/10 text-portfolio-blue rounded-full mb-6 inline-block">
-                Software Developer & QA Engineer
+                Computer Science Engineer | Python Developer | Software Tester
               </span>
             </div>
             
@@ -26,26 +26,26 @@ const Hero: React.FC = () => {
             </h1>
             
             <p className="text-gray-300 text-lg max-w-lg">
-              Computer Science graduate with expertise in Python development, software testing, and web development.
-              Passionate about solving complex problems with clean, efficient code.
+              Computer Science graduate specialized in cybersecurity with expertise in Python development, software testing, and web development.
+              Passionate about solving complex problems and building secure systems.
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
               <Button 
                 className="btn-primary group" 
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <Mail className="mr-2 h-4 w-4" />
-                Get in Touch
+                View My Work
                 <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
               
               <Button 
                 variant="outline" 
                 className="border border-gray-700 bg-gray-800/50 hover:bg-gray-800 hover:border-portfolio-teal text-white transition-all"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <Github className="mr-2 h-4 w-4" />
-                GitHub
+                <Mail className="mr-2 h-4 w-4" />
+                Let's Connect
               </Button>
               
               <Button 

@@ -12,6 +12,7 @@ interface ProjectProps {
   githubUrl: string;
   techStack: string[];
   icon: React.ReactNode;
+  features: string[];
 }
 
 const projectsData: ProjectProps[] = [
@@ -21,7 +22,14 @@ const projectsData: ProjectProps[] = [
     image: "",
     demoUrl: "#",
     githubUrl: "#",
-    techStack: ["Python", "Machine Learning", "scikit-learn", "Data Analysis", "Cybersecurity"],
+    techStack: ["Python", "Machine Learning", "Data Analysis", "Cybersecurity"],
+    features: [
+      "Domain analysis and verification",
+      "Special character detection",
+      "URL length assessment",
+      "Domain age comparison",
+      "Improved user security against online threats"
+    ],
     icon: <Shield size={48} className="text-portfolio-blue" />
   },
   {
@@ -30,7 +38,14 @@ const projectsData: ProjectProps[] = [
     image: "",
     demoUrl: "#",
     githubUrl: "#",
-    techStack: ["HTML", "CSS", "JavaScript", "Responsive Design", "Web Development"],
+    techStack: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    features: [
+      "Multiple choice question support",
+      "Real-time feedback system",
+      "Score tracking and analytics",
+      "Cross-browser compatibility",
+      "Intuitive interface for quiz creators and takers"
+    ],
     icon: <FileQuestion size={48} className="text-portfolio-teal" />
   }
 ];
@@ -42,6 +57,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
   demoUrl, 
   githubUrl, 
   techStack,
+  features,
   icon 
 }) => {
   return (
@@ -62,6 +78,16 @@ const ProjectCard: React.FC<ProjectProps> = ({
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2 text-white">{title}</h3>
         <p className="text-gray-300 mb-4">{description}</p>
+        
+        {/* Features */}
+        <div className="mb-4">
+          <h4 className="text-sm font-medium text-gray-400 mb-2">Key Features:</h4>
+          <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
+            {features.map((feature, idx) => (
+              <li key={idx}>{feature}</li>
+            ))}
+          </ul>
+        </div>
         
         {/* Tech Stack */}
         <div className="flex flex-wrap gap-2 mb-6">

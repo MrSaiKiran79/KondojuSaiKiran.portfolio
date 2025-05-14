@@ -1,6 +1,17 @@
 
 import React from 'react';
-import { Code, Database, Layout, FileCode, Terminal, Server, Search, Lightbulb, BrainCircuit } from 'lucide-react';
+import { 
+  Code, 
+  Database, 
+  Layout, 
+  Terminal, 
+  Search, 
+  BrainCircuit, 
+  Shield,
+  Server,
+  Languages,
+  HeartHandshake
+} from 'lucide-react';
 
 interface SkillCategoryProps {
   title: string;
@@ -12,32 +23,42 @@ const skillsData: SkillCategoryProps[] = [
   {
     title: "Programming Languages",
     icon: <Code className="h-8 w-8 text-portfolio-teal" />,
-    skills: ["Python", "JavaScript", "Java", "C++", "SQL"]
+    skills: ["Python", "JavaScript", "HTML", "CSS", "SQL"]
   },
   {
     title: "Web Development",
     icon: <Layout className="h-8 w-8 text-portfolio-teal" />,
-    skills: ["HTML/CSS", "JavaScript", "React", "Django", "Flask", "Responsive Design"]
+    skills: ["HTML/CSS", "JavaScript", "ReactJS", "Responsive Design"]
   },
   {
-    title: "Software Testing",
+    title: "Testing",
     icon: <Search className="h-8 w-8 text-portfolio-teal" />,
-    skills: ["Manual Testing", "Automated Testing", "Selenium", "JUnit", "Test Case Design", "Regression Testing"]
+    skills: ["Manual Testing", "Automation Testing", "Selenium", "Test Case Design", "Regression Testing"]
   },
   {
-    title: "Tools & Version Control",
+    title: "Tools & Environment",
     icon: <Terminal className="h-8 w-8 text-portfolio-teal" />,
-    skills: ["Git", "GitHub", "VS Code", "PyCharm", "JIRA", "Postman"]
+    skills: ["Git", "GitHub", "VS Code", "Windows", "Linux"]
   },
   {
     title: "Database",
     icon: <Database className="h-8 w-8 text-portfolio-teal" />,
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "SQLite", "Database Design"]
+    skills: ["SQL", "Database Design"]
+  },
+  {
+    title: "Cybersecurity",
+    icon: <Shield className="h-8 w-8 text-portfolio-teal" />,
+    skills: ["Ethical Hacking", "Vulnerability Assessment", "Penetration Testing", "Computer Networks", "Wireshark", "Nmap", "Burp Suite"]
   },
   {
     title: "Problem Solving",
     icon: <BrainCircuit className="h-8 w-8 text-portfolio-teal" />,
-    skills: ["Data Structures", "Algorithms", "Analytical Thinking", "Debugging", "Performance Optimization"]
+    skills: ["Data Structures", "Algorithms", "Analytical Thinking", "Debugging"]
+  },
+  {
+    title: "Soft Skills",
+    icon: <HeartHandshake className="h-8 w-8 text-portfolio-teal" />,
+    skills: ["Self-learning", "Presentation", "Adaptability", "Team Collaboration", "Communication"]
   }
 ];
 

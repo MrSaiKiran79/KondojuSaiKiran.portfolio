@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
         <div className="animate-fade-in">
           <h3 className="text-2xl font-bold mb-6 text-white">Let's Connect!</h3>
           <p className="text-gray-300 mb-8 text-lg">
-            I'm interested in freelance opportunities, full-time positions, and collaborative projects. Feel free to reach out through the form or any of the channels below.
+            I'm interested in freelance opportunities, full-time positions, and internships. Feel free to reach out through the form or any of the channels below.
           </p>
           
           <div className="space-y-6">
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-semibold text-white">Email</h4>
-                <p className="text-gray-300">kiran.kondoju@example.com</p>
+                <p className="text-gray-300">saikirankondoju0620@gmail.com</p>
               </div>
             </div>
             
@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-semibold text-white">Phone</h4>
-                <p className="text-gray-300">+1 (555) 123-4567</p>
+                <p className="text-gray-300">+91 7981544362</p>
               </div>
             </div>
             
@@ -86,14 +86,14 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-semibold text-white">Location</h4>
-                <p className="text-gray-300">San Francisco, CA</p>
+                <p className="text-gray-300">Hyderabad, India</p>
               </div>
             </div>
 
             <div className="pt-4">
               <h4 className="font-semibold text-white mb-3">Connect on</h4>
               <div className="flex gap-4">
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" 
+                <a href="https://github.com/MrSaiKiran79" target="_blank" rel="noopener noreferrer" 
                    className="bg-portfolio-teal/20 p-3 rounded-full hover:bg-portfolio-teal/30 transition-colors">
                   <Github className="h-6 w-6 text-portfolio-teal" />
                 </a>
