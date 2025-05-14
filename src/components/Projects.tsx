@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink, Code } from 'lucide-react';
+import { Github, ExternalLink, Code, Shield, FileQuestion } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 interface ProjectProps {
@@ -11,32 +11,27 @@ interface ProjectProps {
   demoUrl: string;
   githubUrl: string;
   techStack: string[];
+  icon: React.ReactNode;
 }
 
 const projectsData: ProjectProps[] = [
   {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce platform with product listings, shopping cart, and payment integration using Stripe.",
+    title: "Phishing Link Detection",
+    description: "A machine learning solution that analyzes URLs to identify potential phishing attempts. The system extracts various features from URLs and applies classification algorithms to detect malicious links.",
     image: "",
     demoUrl: "#",
     githubUrl: "#",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "Stripe API"]
+    techStack: ["Python", "Machine Learning", "scikit-learn", "Data Analysis", "Cybersecurity"],
+    icon: <Shield size={48} className="text-portfolio-blue" />
   },
   {
-    title: "Social Media Dashboard",
-    description: "Analytics dashboard for social media platforms with data visualization and reporting features.",
+    title: "Online Quiz Platform",
+    description: "A responsive web application that allows users to create, share, and participate in quizzes on various topics. Features include timed quizzes, instant feedback, and a leaderboard system.",
     image: "",
     demoUrl: "#",
     githubUrl: "#",
-    techStack: ["Vue.js", "Tailwind CSS", "Firebase", "Chart.js", "REST API"]
-  },
-  {
-    title: "Task Management App",
-    description: "A Kanban-style task management application with drag and drop functionality and team collaboration features.",
-    image: "",
-    demoUrl: "#",
-    githubUrl: "#",
-    techStack: ["TypeScript", "React", "Redux", "Node.js", "PostgreSQL"]
+    techStack: ["HTML", "CSS", "JavaScript", "Responsive Design", "Web Development"],
+    icon: <FileQuestion size={48} className="text-portfolio-teal" />
   }
 ];
 
@@ -46,28 +41,32 @@ const ProjectCard: React.FC<ProjectProps> = ({
   image, 
   demoUrl, 
   githubUrl, 
-  techStack 
+  techStack,
+  icon 
 }) => {
   return (
     <div className="project-card">
       {/* Project Image */}
-      <div className="h-48 bg-gray-100 flex items-center justify-center">
+      <div className="h-48 bg-gray-800/50 flex items-center justify-center">
         {image ? (
           <img src={image} alt={title} className="w-full h-full object-cover" />
         ) : (
-          <Code size={48} className="text-gray-400" />
+          <div className="flex flex-col items-center">
+            {icon}
+            <span className="mt-2 text-gray-300">Project Preview</span>
+          </div>
         )}
       </div>
       
       {/* Project Details */}
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
+        <h3 className="text-xl font-bold mb-2 text-white">{title}</h3>
+        <p className="text-gray-300 mb-4">{description}</p>
         
         {/* Tech Stack */}
         <div className="flex flex-wrap gap-2 mb-6">
           {techStack.map((tech, index) => (
-            <Badge key={index} variant="secondary" className="bg-portfolio-lavender text-portfolio-purple">
+            <Badge key={index} variant="secondary" className="bg-portfolio-teal/10 text-portfolio-teal">
               {tech}
             </Badge>
           ))}
@@ -75,13 +74,13 @@ const ProjectCard: React.FC<ProjectProps> = ({
         
         {/* Action Buttons */}
         <div className="flex gap-3">
-          <Button variant="outline" size="sm" asChild className="flex-1">
+          <Button variant="outline" size="sm" asChild className="flex-1 border-gray-700 hover:border-portfolio-teal">
             <a href={demoUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink size={16} className="mr-1" />
               Live Demo
             </a>
           </Button>
-          <Button variant="outline" size="sm" asChild className="flex-1">
+          <Button variant="outline" size="sm" asChild className="flex-1 border-gray-700 hover:border-portfolio-teal">
             <a href={githubUrl} target="_blank" rel="noopener noreferrer">
               <Github size={16} className="mr-1" />
               GitHub
@@ -100,7 +99,7 @@ const Projects: React.FC = () => {
         My <span className="gradient-text">Projects</span>
       </h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projectsData.map((project, index) => (
           <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.15}s` }}>
             <ProjectCard {...project} />

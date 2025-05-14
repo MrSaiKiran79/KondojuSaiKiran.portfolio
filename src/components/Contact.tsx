@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const { toast } = useToast();
@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="section-container">
+    <section id="contact" className="section-container bg-gray-900/30">
       <h2 className="section-title">
         Get in <span className="gradient-text">Touch</span>
       </h2>
@@ -54,50 +54,64 @@ const Contact: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* Contact Information */}
         <div className="animate-fade-in">
-          <h3 className="text-2xl font-bold mb-6">Let's Connect!</h3>
-          <p className="text-gray-600 mb-8 text-lg">
-            Have a project in mind or just want to say hello? Feel free to reach out through the form or any of the channels below.
+          <h3 className="text-2xl font-bold mb-6 text-white">Let's Connect!</h3>
+          <p className="text-gray-300 mb-8 text-lg">
+            I'm interested in freelance opportunities, full-time positions, and collaborative projects. Feel free to reach out through the form or any of the channels below.
           </p>
           
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <div className="bg-portfolio-lavender p-3 rounded-full">
-                <Mail className="h-6 w-6 text-portfolio-purple" />
+              <div className="bg-portfolio-teal/20 p-3 rounded-full">
+                <Mail className="h-6 w-6 text-portfolio-teal" />
               </div>
               <div>
-                <h4 className="font-semibold">Email</h4>
-                <p className="text-gray-600">hello@example.com</p>
+                <h4 className="font-semibold text-white">Email</h4>
+                <p className="text-gray-300">kiran.kondoju@example.com</p>
               </div>
             </div>
             
             <div className="flex items-start gap-4">
-              <div className="bg-portfolio-lavender p-3 rounded-full">
-                <Phone className="h-6 w-6 text-portfolio-purple" />
+              <div className="bg-portfolio-teal/20 p-3 rounded-full">
+                <Phone className="h-6 w-6 text-portfolio-teal" />
               </div>
               <div>
-                <h4 className="font-semibold">Phone</h4>
-                <p className="text-gray-600">+1 (555) 123-4567</p>
+                <h4 className="font-semibold text-white">Phone</h4>
+                <p className="text-gray-300">+1 (555) 123-4567</p>
               </div>
             </div>
             
             <div className="flex items-start gap-4">
-              <div className="bg-portfolio-lavender p-3 rounded-full">
-                <MapPin className="h-6 w-6 text-portfolio-purple" />
+              <div className="bg-portfolio-teal/20 p-3 rounded-full">
+                <MapPin className="h-6 w-6 text-portfolio-teal" />
               </div>
               <div>
-                <h4 className="font-semibold">Location</h4>
-                <p className="text-gray-600">San Francisco, CA</p>
+                <h4 className="font-semibold text-white">Location</h4>
+                <p className="text-gray-300">San Francisco, CA</p>
+              </div>
+            </div>
+
+            <div className="pt-4">
+              <h4 className="font-semibold text-white mb-3">Connect on</h4>
+              <div className="flex gap-4">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" 
+                   className="bg-portfolio-teal/20 p-3 rounded-full hover:bg-portfolio-teal/30 transition-colors">
+                  <Github className="h-6 w-6 text-portfolio-teal" />
+                </a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
+                   className="bg-portfolio-teal/20 p-3 rounded-full hover:bg-portfolio-teal/30 transition-colors">
+                  <Linkedin className="h-6 w-6 text-portfolio-teal" />
+                </a>
               </div>
             </div>
           </div>
         </div>
         
         {/* Contact Form */}
-        <div className="bg-white rounded-xl shadow-lg p-8 animate-fade-in">
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl shadow-lg p-8 animate-fade-in">
           <form onSubmit={handleSubmit}>
             <div className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-1">
+                <label htmlFor="name" className="block text-sm font-medium mb-1 text-white">
                   Name
                 </label>
                 <Input
@@ -112,7 +126,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-1">
+                <label htmlFor="email" className="block text-sm font-medium mb-1 text-white">
                   Email
                 </label>
                 <Input
@@ -128,7 +142,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-1">
+                <label htmlFor="subject" className="block text-sm font-medium mb-1 text-white">
                   Subject
                 </label>
                 <Input
@@ -143,7 +157,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-1">
+                <label htmlFor="message" className="block text-sm font-medium mb-1 text-white">
                   Message
                 </label>
                 <Textarea

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Code, Database, Layout, FileCode, Terminal, Server } from 'lucide-react';
+import { Code, Database, Layout, FileCode, Terminal, Server, Search, Lightbulb, BrainCircuit } from 'lucide-react';
 
 interface SkillCategoryProps {
   title: string;
@@ -10,48 +10,48 @@ interface SkillCategoryProps {
 
 const skillsData: SkillCategoryProps[] = [
   {
-    title: "Frontend",
-    icon: <Layout className="h-8 w-8 text-portfolio-purple" />,
-    skills: ["HTML/CSS", "JavaScript", "TypeScript", "React", "Vue.js", "Next.js", "Tailwind CSS", "Material UI"]
+    title: "Programming Languages",
+    icon: <Code className="h-8 w-8 text-portfolio-teal" />,
+    skills: ["Python", "JavaScript", "Java", "C++", "SQL"]
   },
   {
-    title: "Backend",
-    icon: <Server className="h-8 w-8 text-portfolio-purple" />,
-    skills: ["Node.js", "Express", "NestJS", "Django", "Flask", "Spring Boot", "GraphQL"]
+    title: "Web Development",
+    icon: <Layout className="h-8 w-8 text-portfolio-teal" />,
+    skills: ["HTML/CSS", "JavaScript", "React", "Django", "Flask", "Responsive Design"]
+  },
+  {
+    title: "Software Testing",
+    icon: <Search className="h-8 w-8 text-portfolio-teal" />,
+    skills: ["Manual Testing", "Automated Testing", "Selenium", "JUnit", "Test Case Design", "Regression Testing"]
+  },
+  {
+    title: "Tools & Version Control",
+    icon: <Terminal className="h-8 w-8 text-portfolio-teal" />,
+    skills: ["Git", "GitHub", "VS Code", "PyCharm", "JIRA", "Postman"]
   },
   {
     title: "Database",
-    icon: <Database className="h-8 w-8 text-portfolio-purple" />,
-    skills: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "Redis", "Supabase", "Prisma"]
+    icon: <Database className="h-8 w-8 text-portfolio-teal" />,
+    skills: ["MySQL", "PostgreSQL", "MongoDB", "SQLite", "Database Design"]
   },
   {
-    title: "DevOps",
-    icon: <Terminal className="h-8 w-8 text-portfolio-purple" />,
-    skills: ["Git", "Docker", "Kubernetes", "AWS", "CI/CD", "Netlify", "Vercel", "GitHub Actions"]
-  },
-  {
-    title: "Tools",
-    icon: <FileCode className="h-8 w-8 text-portfolio-purple" />,
-    skills: ["VS Code", "Figma", "Postman", "Jest", "Cypress", "Webpack", "NPM/Yarn"]
-  },
-  {
-    title: "Methodologies",
-    icon: <Code className="h-8 w-8 text-portfolio-purple" />,
-    skills: ["Agile/Scrum", "TDD", "REST API Design", "Microservices", "Responsive Design", "Accessibility"]
+    title: "Problem Solving",
+    icon: <BrainCircuit className="h-8 w-8 text-portfolio-teal" />,
+    skills: ["Data Structures", "Algorithms", "Analytical Thinking", "Debugging", "Performance Optimization"]
   }
 ];
 
 const SkillCategory: React.FC<SkillCategoryProps> = ({ title, icon, skills }) => {
   return (
-    <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
+    <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl shadow-md hover:shadow-lg transition-all hover:bg-white/10">
       <div className="flex items-center gap-3 mb-4">
         {icon}
-        <h3 className="text-xl font-semibold">{title}</h3>
+        <h3 className="text-xl font-semibold text-white">{title}</h3>
       </div>
       <ul className="space-y-2">
         {skills.map((skill, index) => (
-          <li key={index} className="flex items-center gap-2">
-            <div className="h-1.5 w-1.5 rounded-full bg-portfolio-purple"></div>
+          <li key={index} className="flex items-center gap-2 text-gray-300">
+            <div className="h-1.5 w-1.5 rounded-full bg-portfolio-teal"></div>
             <span>{skill}</span>
           </li>
         ))}
@@ -62,7 +62,7 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, icon, skills }) =>
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="section-container bg-gray-50">
+    <section id="skills" className="section-container bg-gray-900/50">
       <h2 className="section-title">
         My <span className="gradient-text">Skills</span>
       </h2>

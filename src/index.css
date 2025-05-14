@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,16 +7,16 @@
 
 @layer base {
   :root {
-    --background: 250 100% 99%;
-    --foreground: 240 10% 3.9%;
+    --background: 222 24% 14%;
+    --foreground: 0 0% 100%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 222 24% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 222 24% 14%;
 
-    --primary: 255 92% 76%;
+    --primary: 195 92% 44%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 240 4.8% 95.9%;
@@ -33,7 +33,7 @@
 
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 255 92% 76%;
+    --ring: 195 92% 44%;
 
     --radius: 0.5rem;
   }
@@ -44,16 +44,16 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-portfolio-charcoal text-white font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   .project-card {
-    @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply bg-white/10 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-portfolio-purple to-portfolio-lightPurple text-transparent bg-clip-text;
+    @apply bg-gradient-to-r from-portfolio-blue to-portfolio-teal text-transparent bg-clip-text;
   }
 
   .section-container {
@@ -65,10 +65,10 @@
   }
 
   .input-field {
-    @apply w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700 focus:border-portfolio-purple focus:outline-none focus:ring-1 focus:ring-portfolio-purple;
+    @apply w-full rounded-lg border border-gray-700 bg-white/5 backdrop-blur-sm px-4 py-3 text-sm text-white focus:border-portfolio-teal focus:outline-none focus:ring-1 focus:ring-portfolio-teal;
   }
 
   .btn-primary {
-    @apply bg-portfolio-purple hover:bg-purple-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 inline-flex items-center justify-center;
+    @apply bg-portfolio-emerald hover:bg-emerald-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 inline-flex items-center justify-center;
   }
 }

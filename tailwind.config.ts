@@ -54,10 +54,11 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				portfolio: {
-          blue: '#1a1f2c',
-          purple: '#8b5cf6',
-          lavender: '#e5deff',
-          lightPurple: '#d6bcfa'
+          blue: '#0EA5E9',
+          teal: '#14B8A6',
+          charcoal: '#1A1F2C',
+          lightGray: '#F1F1F1',
+          emerald: '#10B981'
         }
 			},
 			borderRadius: {
@@ -110,7 +111,7 @@ export default {
         'fade-in-right': 'fade-in-right 0.6s ease-out'
 			},
       fontFamily: {
-        'sans': ['Inter', 'sans-serif'],
+        'sans': ['Arial', 'sans-serif'],
       }
 		}
 	},
