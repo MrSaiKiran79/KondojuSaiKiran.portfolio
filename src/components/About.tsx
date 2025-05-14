@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { GraduationCap, Code, Lightbulb } from 'lucide-react';
+import { GraduationCap, Code, Lightbulb, Search, Layout } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
