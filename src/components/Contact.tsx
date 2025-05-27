@@ -93,11 +93,11 @@ const Contact: React.FC = () => {
             <div className="pt-4">
               <h4 className="font-semibold text-white mb-3">Connect on</h4>
               <div className="flex gap-4">
-                <a href="https://github.com/MrSaiKiran79" target="_blank" rel="noopener noreferrer" 
+                <a href="https://github.com/mrsaikiran79" target="_blank" rel="noopener noreferrer" 
                    className="bg-portfolio-teal/20 p-3 rounded-full hover:bg-portfolio-teal/30 transition-colors">
                   <Github className="h-6 w-6 text-portfolio-teal" />
                 </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/kondoju-sai-kiran/" target="_blank" rel="noopener noreferrer"
                    className="bg-portfolio-teal/20 p-3 rounded-full hover:bg-portfolio-teal/30 transition-colors">
                   <Linkedin className="h-6 w-6 text-portfolio-teal" />
                 </a>
