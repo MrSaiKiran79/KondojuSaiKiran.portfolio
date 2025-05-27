@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
                   {/* Profile image */}
                   <div className="w-full h-full rounded-full overflow-hidden">
                     <img 
-                      src="https://i.postimg.cc/Hsx1RfcJ/Sai-Kiran-modified.jpg" 
+                      src="/lovable-uploads/1c75495b-f8e9-4341-8cfa-eafc3d973a91.png" 
                       alt="Kondoju Sai Kiran" 
                       className="w-full h-full object-cover"
                     />
