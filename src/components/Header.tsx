@@ -49,7 +49,7 @@ const Header: React.FC = () => {
   ];
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
+    const element = document.querySelector(href) as HTMLElement;
     if (element) {
       const headerHeight = 80;
       const elementPosition = element.offsetTop - headerHeight;
