@@ -22,7 +22,7 @@ const Header: React.FC = () => {
 
   const handleDownloadResume = () => {
     // You can replace this URL with your actual resume URL
-    const resumeUrl = '/path-to-your-resume.pdf'; // Replace with actual path
+    const resumeUrl = 'https://github.com/MrSaiKiran79/KondojuSaiKiran.portfolio/blob/main/Kiran_2024.pdf'; // Replace with actual path
     
     // For now, show an alert with instructions
     alert(`To add your resume:
