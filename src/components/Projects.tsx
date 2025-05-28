@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink, Code, Shield, FileQuestion } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -13,6 +13,7 @@ interface ProjectProps {
   techStack: string[];
   icon: React.ReactNode;
   features: string[];
+  category: string;
 }
 
 const projectsData: ProjectProps[] = [
@@ -30,6 +31,7 @@ const projectsData: ProjectProps[] = [
       "Domain age comparison",
       "Improved user security against online threats"
     ],
+    category: "Cybersecurity",
     icon: <Shield size={48} className="text-portfolio-blue" />
   },
   {
@@ -46,6 +48,7 @@ const projectsData: ProjectProps[] = [
       "Cross-browser compatibility",
       "Intuitive interface for quiz creators and takers"
     ],
+    category: "Web Development",
     icon: <FileQuestion size={48} className="text-portfolio-teal" />
   }
 ];
@@ -119,19 +122,53 @@ const ProjectCard: React.FC<ProjectProps> = ({
 };
 
 const Projects: React.FC = () => {
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const categories = ['All', 'Cybersecurity', 'Testing', 'Web Development'];
+
+  const filteredProjects = activeFilter === 'All' 
+    ? projectsData 
+    : projectsData.filter(project => project.category === activeFilter);
+
   return (
     <section id="projects" className="section-container">
       <h2 className="section-title">
         My <span className="gradient-text">Projects</span>
       </h2>
       
+      {/* Filter Buttons */}
+      <div className="flex flex-wrap justify-center gap-3 mb-8">
+        {categories.map((category) => (
+          <Button
+            key={category}
+            onClick={() => setActiveFilter(category)}
+            variant={activeFilter === category ? "default" : "outline"}
+            className={`
+              ${activeFilter === category 
+                ? 'bg-portfolio-teal hover:bg-portfolio-teal/90 text-white' 
+                : 'border-gray-700 text-gray-300 hover:border-portfolio-teal hover:text-portfolio-teal'
+              }
+              transition-all duration-300
+            `}
+          >
+            {category}
+          </Button>
+        ))}
+      </div>
+      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projectsData.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.15}s` }}>
             <ProjectCard {...project} />
           </div>
         ))}
       </div>
+
+      {filteredProjects.length === 0 && (
+        <div className="text-center py-12">
+          <p className="text-gray-400 text-lg">No projects found in this category.</p>
+        </div>
+      )}
     </section>
   );
 };
